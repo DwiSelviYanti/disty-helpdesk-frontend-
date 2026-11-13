@@ -21,7 +21,7 @@ Bagian tampilan aplikasi Disty HelpDesk (PT Disty Teknologi Indonesia). Berisi h
 | Modul silabus | Letaknya di proyek ini |
 |---|---|
 | 1. Dasar Web Development (HTML dan CSS) | `index.html`, `login.html`, `helpdesk/css/` |
-| 2. Version Control (Git dan GitHub) | Dikerjakan pada repositori proyek |
+| 2. Version Control (Git dan GitHub) | Riwayat commit, branch, dan Pull Request di repositori ini |
 | 3 dan 4. JavaScript Fundamental dan Lanjutan | `helpdesk/core/`, `helpdesk/effects/`, `helpdesk/settings/`, `helpdesk/entry/` |
 | 5. Responsive Design | `helpdesk/css/` (viewport meta ada di kedua halaman) |
 | 6. Framework CSS (Bootstrap dan Tailwind) | `vendor/bootstrap/`, `css/tailwind.css`, `tailwind/` |
