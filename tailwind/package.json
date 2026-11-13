@@ -1,0 +1,12 @@
+{
+  "name": "disty-helpdesk-tailwind",
+  "private": true,
+  "description": "Build Tailwind CSS v3 untuk tampilan Disty HelpDesk (terpisah dari package.json Laravel yang memakai Tailwind v4)",
+  "scripts": {
+    "build": "tailwindcss -c tailwind.config.cjs -i input.css -o ../css/tailwind.css --minify",
+    "watch": "tailwindcss -c tailwind.config.cjs -i input.css -o ../css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
