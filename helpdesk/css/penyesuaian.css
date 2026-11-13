@@ -1,0 +1,236 @@
+/* Disty HelpDesk - penyesuaian akhir v3 (dimuat paling terakhir, setelah gaya-utama.css dan tema-gelap.css)
+   1. Tabel: kolom kode 1 baris, tabel muat di layar tanpa geser kiri-kanan
+   2. Ukuran font diperkecil supaya lebih proporsional
+   3. Tombol utama datar: tanpa bayangan, gradien, atau efek terangkat */
+
+/* ========== 1. TABEL ========== */
+/* Kolom pendek (kode, tanggal, status, dst) diberi class .nw oleh helpdesk/effects/tabel-satu-baris.js */
+html table th{white-space:nowrap}
+html table .nw,html table td.nw *{white-space:nowrap!important}
+html table td{padding-top:12px;padding-bottom:12px}
+html .card:has(table) :is(th,td){padding-left:10px;padding-right:10px}
+html .card:has(table) :is(td:first-child,th:first-child){padding-left:10px}
+html table{table-layout:auto;width:100%}
+
+@media(min-width:768px){
+  /* tidak bisa digeser kiri-kanan di laptop/tablet */
+  html .card:has(table),html .scroll{overflow-x:hidden!important}
+  html .card:has(table) table,html table{min-width:0!important}
+  html table td:not(.nw){overflow-wrap:anywhere}
+}
+/* Di HP layar sempit tetap boleh digeser supaya kolom tidak terpotong */
+@media(max-width:767px){html .scroll,html .card:has(table){overflow-x:auto}}
+
+/* ========== 2. UKURAN FONT ========== */
+html body{font-size:14px!important}
+html h2{font-size:26px!important}
+html h3{font-size:15px!important}
+html .logo{font-size:17px!important}
+html .sb .logo{font-size:18px!important}
+html .stat b,html .wrap .stat b{font-size:28px!important}
+html .k4 b{font-size:24px!important}
+html .met b{font-size:40px!important}
+html .pc b.pr{font-size:34px!important}
+html .stp6 i{font-size:34px!important}
+html .stp6 h4{font-size:16px!important}
+html .sh{font-size:16px!important}
+html .ibh{font-size:15px!important}
+html .kq-t{font-size:15px!important}
+html .lps h3{font-size:17px!important}
+html summary{font-size:14.5px!important}
+html summary::after{font-size:20px!important}
+
+/* beranda */
+html #app .hero6 h1,html .hero6 h1{font-size:clamp(30px,3.6vw,46px)!important;line-height:1.12!important}
+html #app .hero6 p,html .hero6 p{font-size:15.5px!important}
+html .hd6 h2{font-size:clamp(24px,2.8vw,34px)!important}
+html .hd6 p{font-size:15px!important}
+html .rg h3{font-size:24px!important}
+html .cta6 h2{font-size:clamp(24px,2.8vw,34px)!important}
+html .lb h1{font-size:clamp(28px,3vw,40px)!important}
+
+/* dashboard & halaman dalam */
+html #app .col main>h2,html .col main>h2,html .pg2>h2,html .wrap h2{font-size:22px!important}
+html #app .shell .hb h2{font-size:24px!important}
+html #app .shell .hb p{font-size:13.5px!important}
+html .tdh h2{font-size:20px!important}
+html .lph h2{font-size:22px!important}
+html .sub,html .col main>h2+.sub{font-size:13.5px!important}
+
+/* tabel, chip, pill, tombol, input, menu */
+html table{font-size:13px!important}
+html th{font-size:12px!important}
+html .card:has(table) td{font-size:13px!important}
+html .card:has(table) th{font-size:12px!important}
+html .chip{font-size:13px!important}
+html .pill{font-size:11.5px!important}
+html .btn{font-size:13.5px!important;padding:10px 18px}
+html .btn.s{font-size:12.5px!important;padding:6px 12px}
+html input,html select,html textarea{font-size:14px}
+html label{font-size:12.5px}
+html .nav{font-size:13.5px!important}
+html .note{font-size:12px}
+
+/* ========== 3. TOMBOL DATAR ========== */
+html :is(#app,#m,.login,body) .btn:not(.o):not(.g):not(.lt):not(.dk),
+html :is(#app,#m,.login,body) select.sbtn{
+  background:var(--pri)!important;background-image:none!important;
+  box-shadow:none!important;filter:none!important;transform:none!important;
+  border-radius:10px;
+}
+html :is(#app,#m,.login,body) .btn:not(.o):not(.g):not(.lt):not(.dk):hover{
+  background:color-mix(in srgb,var(--pri) 88%,#000)!important;
+  box-shadow:none!important;filter:none!important;transform:none!important;
+}
+html .btn.dk{background:#1b1c20!important;box-shadow:none!important}
+html .btn.dk:hover{background:#2c2d33!important;filter:none!important}
+html .btn:active,html .btn:hover{transform:none!important}
+html .btn.o,html .btn.g,html .btn.lt{box-shadow:none!important}
+/* panah di tombol tidak bergeser saat hover */
+html .btn:hover svg{transform:none!important}
+html .btn:disabled{box-shadow:none!important}
+/* menu aktif di sidebar juga tanpa bayangan */
+html .sb .nav.on,html .sb .nav.on:hover{box-shadow:none!important}
+
+/* ========== 4. TAMBAHAN v3 ========== */
+html h2{font-size:24px!important}
+html .hb h2,html #app .shell .hb h2{font-size:22px!important}
+html .pg2>h2,html .col main>h2,html .lph h2,html .wrap h2{font-size:22px!important}
+html .hero6 p{font-size:15.5px!important}
+html .sb .logo,html .logo{font-size:17px!important}
+html .stp6 h4,html .stat b{font-size:16px}
+html .stat b{font-size:28px!important}
+html .sh{font-size:16px!important}
+html .login .card,html .lf .card,html .card,html .modal .card,html .rv,html .dm,html .hv img{box-shadow:none!important}
+html .toast{box-shadow:0 4px 14px -4px #0004!important}
+/* tombol: tanpa bayangan, gradien, glow, atau efek terangkat (semua halaman, termasuk mode gelap) */
+html .btn,html .btn:hover,html .btn:focus,html .btn:active,html .btn:disabled,
+html[data-theme="dark"] .btn,html[data-theme="dark"] .btn:hover{
+  box-shadow:none!important;text-shadow:none!important;filter:none!important;transform:none!important}
+html .btn:not(.o):not(.g):not(.lt):not(.dk){background-image:none!important}
+html .btn:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+html .logo::before{box-shadow:none!important;background-image:none!important}
+html .sb .nav.on{box-shadow:none!important;background-image:none}
+html .login .card{width:min(420px,100%)}
+@media(max-width:600px){
+  html .lb h1,html .hero6 h1{font-size:26px!important}
+  html .hd6 h2,html .cta6 h2{font-size:22px!important}
+}
+
+/* Skeleton pemuatan awal aplikasi */
+.sk-shell{display:flex;min-height:100dvh;background:#fff}
+.sk-side{width:300px;flex:none;padding:24px;background:#1b1c20;display:flex;flex-direction:column;gap:14px}
+.sk-main{flex:1;min-width:0;padding:24px 32px;display:flex;flex-direction:column;gap:14px}
+.sk-top{display:flex;align-items:center;gap:12px;margin-bottom:18px}.sk-gap{flex:1}
+.sk-b{display:block;border-radius:12px;background:linear-gradient(90deg,#eceef0 25%,#f6f7f8 50%,#eceef0 75%);background-size:200% 100%;animation:skSweep 1.4s ease-in-out infinite}
+.sk-side .sk-b{background:linear-gradient(90deg,#2a2c32 25%,#34363d 50%,#2a2c32 75%);background-size:200% 100%}
+.sk-logo{height:56px;border-radius:14px;margin-bottom:12px}.sk-nav{height:44px}
+.sk-menu{width:64px;height:64px;border-radius:16px}.sk-dot{width:52px;height:52px;border-radius:50%}.sk-user{width:130px;height:40px}
+.sk-title{width:min(260px,60%);height:34px}.sk-sub{width:min(420px,80%);height:18px;margin-bottom:10px}
+.sk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.sk-card{border:1px solid #e6e8eb;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:14px}
+.sk-ico{width:54px;height:54px;border-radius:14px;margin-bottom:8px}.sk-line{height:16px}.sk-line.w60{width:60%;height:20px}.sk-line.w80{width:80%}
+@keyframes skSweep{to{background-position:-200% 0}}
+@media(max-width:860px){.sk-side{display:none}.sk-main{padding:16px}.sk-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.sk-b{animation:none}}
+html[data-theme="dark"] .sk-shell{background:#141518}
+html[data-theme="dark"] .sk-side{background:#101113}
+html[data-theme="dark"] .sk-main .sk-b{background:linear-gradient(90deg,#24262b 25%,#2e3036 50%,#24262b 75%);background-size:200% 100%}
+html[data-theme="dark"] .sk-card{border-color:#30323a}
+
+/* Pratinjau form di beranda hanyalah contoh tampilan: tidak bisa diklik, difokus, atau diketik */
+html #app .L .rv{pointer-events:none;user-select:none;-webkit-user-select:none;cursor:default}
+
+/* Scrollbar jendela artikel mengikuti tema (tipis, bulat, warna oranye utama) */
+.ibx .ibm{scrollbar-width:thin;scrollbar-color:#e6b79e transparent;scrollbar-gutter:stable;color-scheme:light;padding-right:16px}
+.ibx .ibm::-webkit-scrollbar{width:8px}
+.ibx .ibm::-webkit-scrollbar-track{background:transparent;margin:8px 0}
+.ibx .ibm::-webkit-scrollbar-thumb{background:#e6b79e;border-radius:999px}
+.ibx .ibm::-webkit-scrollbar-thumb:hover{background:#c9531b}
+html[data-theme="dark"] .ibx .ibm{scrollbar-color:#6b3a22 transparent;color-scheme:dark}
+html[data-theme="dark"] .ibx .ibm::-webkit-scrollbar-thumb{background:#6b3a22}
+html[data-theme="dark"] .ibx .ibm::-webkit-scrollbar-thumb:hover{background:#e8743b}
+
+/* Efek tombol ala Material (Google): transisi halus, state layer saat hover, bayangan, riak, cincin fokus. Warna tidak diubah. */
+:is(.btn,.chip,.nav,.tabs button,.list-group-item-action,.accordion-button,.ibb,.prow){transition:background-color .2s cubic-bezier(.2,0,0,1),box-shadow .2s cubic-bezier(.2,0,0,1),border-color .2s cubic-bezier(.2,0,0,1),color .2s cubic-bezier(.2,0,0,1),transform .12s cubic-bezier(.2,0,0,1)}
+.rpl-wrap{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none}
+.rpl{position:absolute;border-radius:50%;background:currentColor;opacity:0;transform:scale(0);pointer-events:none;animation:rplGrow .6s cubic-bezier(.4,0,.2,1)}
+@keyframes rplGrow{0%{transform:scale(0);opacity:.24}60%{opacity:.14}100%{transform:scale(1);opacity:0}}
+@media (hover:hover){
+  html :is(.btn:not(.o):not(.g):not(.lt),.ibb):not(:disabled):hover{box-shadow:0 1px 2px rgba(60,64,67,.30),0 1px 3px 1px rgba(60,64,67,.15)!important}
+  html :is(.btn.o,.btn.g,.btn.lt,.chip:not(.on),.nav:not(.on),.tabs button,.list-group-item-action,.accordion-button,.prow):not(:disabled):hover{box-shadow:inset 0 0 0 999px color-mix(in srgb,currentColor 8%,transparent)!important}
+}
+html :is(.btn:not(.o):not(.g):not(.lt),.ibb):not(:disabled):active{box-shadow:0 1px 2px rgba(60,64,67,.30)!important;transform:none}
+html :is(.btn.o,.btn.g,.btn.lt,.chip:not(.on),.nav:not(.on),.tabs button,.list-group-item-action,.accordion-button,.prow):not(:disabled):active{box-shadow:inset 0 0 0 999px color-mix(in srgb,currentColor 12%,transparent)!important}
+html :is(button,.btn,.chip,.nav,[role=button],.list-group-item-action,.prow):focus-visible{outline:2px solid color-mix(in srgb,var(--pri,#c9531b) 55%,transparent)!important;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.rpl-wrap{display:none}}
+
+/* ===== Tema terang: logo tanpa latar, bagian putih, titik notifikasi (v8) =====
+   Berkas logo sudah transparan. Kotak putih di belakangnya berasal dari CSS (.lgp), jadi dihapus di sini.
+   Semua aturan dibatasi ke tema terang supaya tema gelap tidak berubah. */
+html:not([data-theme="dark"]) .lgp,
+html:not([data-theme="dark"]) #app .h6 .lgp,
+html:not([data-theme="dark"]) .lb .lgp,
+html:not([data-theme="dark"]) .lf .lgp,
+html:not([data-theme="dark"]) .lpk .lgp,
+html:not([data-theme="dark"]) .sb .lgp{background:transparent!important;padding:0!important;border-radius:0!important;box-shadow:none!important}
+
+/* Bagian "Cara kerja kami dalam setiap proyek": latar putih */
+html:not([data-theme="dark"]) #proses.sx6.dk{background:#fff!important;color:var(--ink)!important;border-top:1px solid #e6e8eb;border-bottom:1px solid #e6e8eb}
+html:not([data-theme="dark"]) #proses .hd6 h2,
+html:not([data-theme="dark"]) #proses .stp6 h4,
+html:not([data-theme="dark"]) #app .L #proses .stp6 i{color:var(--ink)!important}
+html:not([data-theme="dark"]) #proses .hd6 p,
+html:not([data-theme="dark"]) #proses .stp6 p{color:var(--mut)!important}
+html:not([data-theme="dark"]) #proses .stp6{border-top-color:var(--line)!important}
+
+/* Panel kiri halaman login: latar putih */
+html:not([data-theme="dark"]) .lb{background:#fff!important;color:var(--ink)!important;border-right:1px solid var(--line)}
+html:not([data-theme="dark"]) .lb::before{background:linear-gradient(#1b1c200a 1px,transparent 1px) 0 0/64px 64px,linear-gradient(90deg,#1b1c200a 1px,transparent 1px) 0 0/64px 64px!important}
+html:not([data-theme="dark"]) .lb h1{color:var(--ink)!important}
+html:not([data-theme="dark"]) .lb p,
+html:not([data-theme="dark"]) .lb small{color:var(--mut)!important}
+html:not([data-theme="dark"]) .lb li{color:#3a3c42!important;border-top-color:var(--line)!important}
+html:not([data-theme="dark"]) .lb li svg{color:var(--pri)!important}
+
+/* Sidebar dasbor: putih */
+html:not([data-theme="dark"]) .sb,
+html:not([data-theme="dark"]) #app .shell .sb{background:#fff!important;border-right:1px solid var(--line)!important;scrollbar-color:#0000002e transparent}
+html:not([data-theme="dark"]) .sb .logo{color:var(--ink)!important}
+html:not([data-theme="dark"]) .sb .mu,
+html:not([data-theme="dark"]) .sb small{color:#8a8c93!important}
+html:not([data-theme="dark"]) .sb .nav{color:#55575d!important}
+html:not([data-theme="dark"]) .sb .nav:hover{background:#f4f2ee!important;color:var(--ink)!important}
+html:not([data-theme="dark"]) .sb .nav.on,
+html:not([data-theme="dark"]) .sb .nav.on:hover{background:#c9531b!important;color:#fff!important}
+html:not([data-theme="dark"]) .sb .nav.on svg{color:#fff!important}
+html:not([data-theme="dark"]) .sb::-webkit-scrollbar-thumb{background:#0000002e}
+@media(max-width:900px){html:not([data-theme="dark"]) #app .shell .sb{box-shadow:0 0 40px #00000026!important}}
+
+/* Lonceng notifikasi: titik merah tanpa angka */
+.bell i.nd{top:3px;right:3px;width:11px;height:11px;padding:0;border-radius:50%;background:#e5322d;border:2px solid #fff;box-sizing:content-box;font-size:0;animation:none}
+html[data-theme="dark"] .bell i.nd{border-color:#1d1e22}
+html:not([data-theme="dark"]) .sb .lgp{margin:0 0 6px 14px!important}
+
+/* Tombol nonaktif (mis. "Tandai selesai" sebelum status Monitoring): teks tetap putih, hanya latar yang diredupkan */
+html[data-theme="dark"] :is(#app,#m,.login,body) .btn:not(.o):not(.g):not(.lt):not(.dk):disabled{background:color-mix(in srgb,#e8743b 55%,#1d1e22)!important;color:#fff!important;opacity:1;cursor:not-allowed}
+html:not([data-theme="dark"]) :is(#app,#m,.login,body) .btn:not(.o):not(.g):not(.lt):not(.dk):disabled{background:color-mix(in srgb,#c9531b 60%,#fff)!important;color:#fff!important;opacity:1;cursor:not-allowed}
+
+/* Langkah status (Baru > Diproses > Monitoring > Selesai): langkah belum aktif tetap terlihat di tema terang */
+html:not([data-theme="dark"]) .steps div:not(.on){background:#f1efeb!important;color:var(--mut)}
+
+/* Scrollbar tipis dan menyatu dengan latar (dropdown, halaman, dan semua area yang bisa digulir) */
+html{scrollbar-width:thin;scrollbar-color:#0000002e transparent;color-scheme:light}
+html[data-theme="dark"]{scrollbar-color:#ffffff2e transparent;color-scheme:dark}
+html *{scrollbar-width:thin;scrollbar-color:#0000002e transparent}
+html[data-theme="dark"] *{scrollbar-color:#ffffff2e transparent}
+.ddm{scrollbar-width:thin;scrollbar-gutter:auto;color-scheme:light}
+html[data-theme="dark"] .ddm{color-scheme:dark}
+html ::-webkit-scrollbar{width:8px;height:8px}
+html ::-webkit-scrollbar-track{background:transparent}
+html ::-webkit-scrollbar-thumb{background:#0000002e;border-radius:999px;border:2px solid transparent;background-clip:padding-box}
+html ::-webkit-scrollbar-thumb:hover{background:#00000052;background-clip:padding-box}
+html[data-theme="dark"] ::-webkit-scrollbar-thumb{background:#ffffff2e;background-clip:padding-box}
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover{background:#ffffff52;background-clip:padding-box}
+html ::-webkit-scrollbar-button{display:none;width:0;height:0}
+html ::-webkit-scrollbar-corner{background:transparent}
