@@ -7,6 +7,9 @@
   <title>Disty HelpDesk</title>
   <script>try{var t=localStorage.getItem("disty-helpdesk-tema");document.documentElement.dataset.theme=t=="gelap"||(t=="sistem"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light"}catch(e){}</script>
 
+  <link rel="icon" href="favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
   <link id="bsCss" rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="css/tailwind.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="helpdesk/css/gaya-utama.css">
   <link rel="stylesheet" href="helpdesk/css/tema-gelap.css">
-  <link rel="stylesheet" href="helpdesk/css/penyesuaian.css?v=11">
+  <link rel="stylesheet" href="helpdesk/css/penyesuaian.css?v=20">
 </head>
 <body>
   <div id="app"></div>
@@ -29,11 +32,11 @@
 
   <!-- aplikasi -->
   <script src="helpdesk/core/state-dan-data.js?v=3"></script>
-  <script src="helpdesk/core/ui-helper.js?v=3"></script>
-  <script src="helpdesk/core/app-utama.js?v=5"></script>
+  <script src="helpdesk/core/ui-helper.js?v=5"></script>
+  <script src="helpdesk/core/app-utama.js?v=8"></script>
   <script src="helpdesk/client/halaman-klien.js?v=4"></script>
-  <script src="helpdesk/admin/halaman-admin.js"></script>
-  <script src="helpdesk/technician/halaman-teknisi.js?v=4"></script>
+  <script src="helpdesk/admin/halaman-admin.js?v=8"></script>
+  <script src="helpdesk/technician/halaman-teknisi.js?v=9"></script>
 
   <!-- komponen React -->
   <script src="helpdesk/components/hooks/useCountUp.js"></script>
@@ -45,9 +48,9 @@
   <script src="helpdesk/effects/tabel-satu-baris.js?v=3"></script>
 
   <!-- API, bahasa, pengaturan -->
-  <script src="helpdesk/api/api-klien.js?v=3"></script>
+  <script src="helpdesk/api/api-klien.js?v=4"></script>
   <script src="helpdesk/api/api-tiruan.js"></script>
-  <script src="helpdesk/settings/bahasa.js?v=3"></script>
+  <script src="helpdesk/settings/bahasa.js?v=4"></script>
   <script src="helpdesk/settings/pengaturan-akun.js"></script>
   <script src="helpdesk/effects/efek-tombol.js?v=1"></script>
   <script src="helpdesk/entry/beranda.js"></script>
