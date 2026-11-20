@@ -25,7 +25,7 @@ Bagian tampilan aplikasi Disty HelpDesk (PT Disty Teknologi Indonesia). Berisi h
 | 3 dan 4. JavaScript Fundamental dan Lanjutan | `helpdesk/core/`, `helpdesk/effects/`, `helpdesk/settings/`, `helpdesk/entry/` |
 | 5. Responsive Design | `helpdesk/css/` (viewport meta ada di kedua halaman) |
 | 6. Framework CSS (Bootstrap dan Tailwind) | `vendor/bootstrap/`, `css/tailwind.css`, `tailwind/` |
-| 7. UI/UX Design | Tampilan per peran di `helpdesk/admin/`, `client/`, `technician/` |
+| 7. UI/UX Design | Wireframe, prototype Figma, dan uji pengguna di `docs/ui-ux/`. Tampilan per peran di `helpdesk/admin/`, `client/`, `technician/` |
 | 8. Front-End Framework (React) | `vendor/react/`, `helpdesk/components/` |
 | 9. API Integration | `helpdesk/api/api-klien.js` (klien REST), `api-tiruan.js` (server tiruan) |
 | 10. Project Development | Seluruh folder ini |

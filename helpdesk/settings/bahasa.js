@@ -91,6 +91,8 @@ const EN = {
   "Sebutkan bagian yang diperbaiki, mis. printer lab atau jaringan WiFi": "Name the part fixed, e.g. lab printer or WiFi network",
   "Terisi otomatis dari akun yang login. Tambahkan nama lain jika ditangani bersama.": "Filled automatically from the logged-in account. Add other names if handled together.",
   "Ditangani oleh": "Handled by", "Dokumentasi Perbaikan": "Repair Documentation", "Belum ada foto": "No photos yet", "Sebelum": "Before", "Sesudah": "After",
+  /* admin: peringatan aduan > 24 jam */
+  "Perlu segera ditangani": "Needs immediate attention", "Aduan baru yang belum dikerjakan lebih dari 24 jam. Tugaskan ke teknisi sekarang.": "New complaints not handled for over 24 hours. Assign a technician now.", "Lama menunggu": "Waiting time", "Tugaskan": "Assign",
   /* klien: aduan */
   "Cukup 4 isian, sisanya kami yang tangani.": "Just 4 fields, we handle the rest.", "Sebelum mengajukan aduan, pastikan Anda sudah menyiapkan data yang diperlukan agar proses lebih cepat.": "Before submitting a complaint, make sure you have the required data ready so the process is faster.",
   "Jenis bantuan": "Type of help", "Judul Aduan": "Complaint Title", "Ceritakan singkat": "Briefly describe", "Apa yang terjadi?": "What happened?", "Screenshot (opsional)": "Screenshot (optional)",

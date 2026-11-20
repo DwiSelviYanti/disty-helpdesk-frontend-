@@ -7,10 +7,10 @@ const _goLogin=goLogin;
 goLogin=async()=>{
  const b=document.getElementById('bm');
  if(!b||b.disabled)return _goLogin().catch(err=>toast(pesanError(err)));
- const t=b.textContent;b.disabled=true;b.textContent='Memeriksa akun...';
+ const t=b.innerHTML,h=b.offsetHeight;b.disabled=true;b.style.minHeight=h+'px';b.setAttribute('aria-busy','true');b.setAttribute('aria-label','Memeriksa akun');b.innerHTML='<span class="spin" aria-hidden="true"></span>';
  try{await _goLogin()}
  catch(err){toast(pesanError(err))}
- finally{b.disabled=false;b.textContent=t}
+ finally{b.disabled=false;b.style.minHeight='';b.removeAttribute('aria-busy');b.removeAttribute('aria-label');b.innerHTML=t}
 };
 const BSCSS='vendor/bootstrap/bootstrap.min.css';
 const bsCss=on=>{const l=document.getElementById('bsCss');if(on&&!l){const n=Object.assign(document.createElement('link'),{id:'bsCss',rel:'stylesheet',href:BSCSS});document.head.insertBefore(n,document.head.querySelector('link[rel=stylesheet]'))}else if(!on&&l)l.remove()};
